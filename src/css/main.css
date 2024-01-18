@@ -1,3 +1,7 @@
 body {
-  background: grey;
+  position: relative;
+  top: 1px;
+  left: 20px;
+  display: inline;
+  width: 50px;
 }

@@ -1,7 +1,13 @@
 {
   "extends": "stylelint-config-standard-scss",
   "plugins": ["stylelint-order"],
-  "ignoreFiles": ["**/*.js", "**/*.md", "**/*.json", ".eslintrc.cjs"],
+  "ignoreFiles": [
+    "**/*.js",
+    "**/*.md",
+    "**/*.json",
+    ".eslintrc.cjs",
+    "./src/scss/base/normalize.scss"
+  ],
   "rules": {
     "declaration-empty-line-before": "never",
     "media-feature-range-notation": null,

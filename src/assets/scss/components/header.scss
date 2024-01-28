@@ -71,6 +71,7 @@
     background-color: var(--neutral-color-130);
     transform: translateY(8px);
     transition: background-color var(--transition);
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -94,6 +95,11 @@
       text-align: center;
       color: var(--neutral-color-140);
       transform: translateX(-50%);
+
+      @include small-tablet {
+        top: -28px;
+        font-size: 20px;
+      }
     }
 
     &-checkbox {
@@ -133,6 +139,7 @@
     color: var(--neutral-color-100);
 
     @include small-tablet {
+      font-size: 20px;
       line-height: 200%;
     }
 

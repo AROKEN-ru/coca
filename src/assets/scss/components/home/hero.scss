@@ -7,7 +7,7 @@
   }
 
   @include mobile {
-    min-height: calc(100dvh - 128px);
+    min-height: calc(100dvh - 109px);
   }
 
   &::before {
@@ -61,7 +61,6 @@
     border-radius: 50%;
   }
 
-
   &__container {
     @include flex-justify-between;
     align-items: flex-end;
@@ -75,7 +74,9 @@
   }
 
   &__left {
-    max-width: 599px;
+    @include mini-desktop {
+      max-width: 617px;
+    }
   }
 
   &__title {
@@ -108,6 +109,12 @@
 
   &__subtitle {
     margin-bottom: 69px;
+
+    & br {
+      @include mini-desktop {
+        display: none;
+      }
+    }
   }
 
   &__form {
@@ -233,10 +240,11 @@
     }
 
     &-body {
-      &-th {
+      &-td {
         font-weight: 700;
         font-size: 20px;
         line-height: 130%;
+        white-space: nowrap;
         color: #fff;
 
         &:nth-child(1) {
@@ -255,7 +263,7 @@
           color: #60d39c;
 
           &::before {
-            background: url('../assets/icons/green-arrow-icon.svg');
+            background: url('../icons/green-arrow-icon.svg');
           }
         }
 
@@ -263,7 +271,7 @@
           color: #e35454;
 
           &::before {
-            background: url('../assets/icons/red-arrow-icon.svg');
+            background: url('../icons/red-arrow-icon.svg');
           }
         }
 

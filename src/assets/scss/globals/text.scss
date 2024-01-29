@@ -5,6 +5,18 @@
 
   &-h2 {
     font-size: 56px;
+
+    @include tablet {
+      font-size: 46px;
+    }
+
+    @include mobile {
+      font-size: 36px;
+    }
+
+    @include small-mobile {
+      font-size: 30px;
+    }
   }
 
   &-h3 {
@@ -17,6 +29,18 @@
 
   &-h5 {
     font-size: 32px;
+
+    @include tablet {
+      font-size: 28px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
+
+    @include small-mobile {
+      font-size: 22px;
+    }
   }
 
   &-h1,
@@ -57,7 +81,7 @@
         width: 76px;
         height: 1px;
         background-color: var(--neutral-color-100);
-        transform: translateY(-20px);
+        transform: translateY(-43px);
 
         @include mini-desktop {
           display: none;
@@ -71,6 +95,10 @@
 
     &-medium {
       font-size: 18px;
+
+      @include mobile {
+        font-size: 16px;
+      }
     }
 
     &-default {

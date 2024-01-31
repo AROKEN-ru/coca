@@ -1,0 +1,54 @@
+.partners {
+  padding: 86px 0;
+
+  @include mobile {
+    padding: 66px 0;
+  }
+
+  &__container {
+    @include flex-all-between;
+    gap: 30px;
+
+    @include small-tablet {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+
+    &-num {
+      display: block;
+      margin-bottom: 16px;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+
+      @include small-mobile {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__list {
+    @include flex-all-center;
+    gap: 10px 30px;
+    flex-wrap: wrap;
+
+    @include mobile {
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    @include flex-all-center;
+    border-radius: 16px;
+    width: 160px;
+    height: 90px;
+    background-color: #fff;
+  }
+}

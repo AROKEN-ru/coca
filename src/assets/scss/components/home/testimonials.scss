@@ -1,0 +1,157 @@
+.testimonials {
+  padding: 69px 0 160px;
+
+  @include mobile {
+    padding: 39px 0 70px;
+  }
+
+  &__head {
+    @include flex-all-between;
+    margin-bottom: 48px;
+
+    @include tablet {
+      flex-direction: column;
+      text-align: center;
+      gap: 24px;
+    }
+
+    @include mobile {
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    max-width: 530px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include tablet {
+      max-width: 650px;
+    }
+  }
+
+  &__descr {
+    max-width: 376px;
+    font-weight: 500;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+
+    @include tablet {
+      max-width: 450px;
+    }
+  }
+
+  &__rating {
+    @include flex-align-center;
+    gap: 8px;
+    margin-bottom: 19px;
+
+    &-num {
+      font-weight: 500;
+      line-height: 162%;
+      color: var(--neutral-color-100);
+    }
+  }
+
+  &__slider-wrapper {
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 115px;
+      height: 77px;
+      background: url('../icons/quotes-icon.svg');
+      transform: translateY(15px);
+
+      @include mini-desktop {
+        transform: translateY(-5px);
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__slider {
+    max-width: 898px;
+  }
+
+  &__comment {
+    &-text {
+      margin-bottom: 40px;
+      font-weight: 500;
+      line-height: 130%;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+    }
+
+    &-author {
+      @include flex-align-center;
+      gap: 24px;
+      font-style: normal;
+
+      &-avatar {
+        overflow: hidden;
+        border-radius: 50%;
+      }
+
+      &-name {
+        font-weight: 600;
+        line-height: 144%;
+        color: var(--neutral-color-100);
+      }
+
+      &-professions {
+        font-weight: 500;
+        line-height: 162%;
+        color: var(--neutral-color-150);
+      }
+    }
+  }
+
+  &__btns {
+    @include flex-align-center;
+    justify-content: flex-end;
+    gap: 16px;
+    transform: translateY(-40px);
+
+    @include mini-desktop {
+      transform: translateY(5px);
+    }
+  }
+
+  &__btn {
+    @include flex-all-center;
+    border: 1px solid var(--neutral-color-40);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition:
+      background-color var(--transition),
+      border-color var(--transition);
+
+    @include small-mobile {
+      width: 40px;
+      height: 40px;
+    }
+
+    & svg path {
+      transition: fill var(--transition);
+    }
+
+    &:hover {
+      background-color: var(--neutral-color-100);
+      border-color: var(--neutral-color-100);
+
+      & svg path {
+        fill: var(--neutral-color-10);
+      }
+    }
+
+    &--next {
+      transform: rotate(-180deg);
+    }
+  }
+}

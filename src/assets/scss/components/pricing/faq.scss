@@ -1,0 +1,116 @@
+.faq {
+  padding: 82px 0 160px;
+  text-align: center;
+
+  @include mobile {
+    padding: 42px 0 80px;
+  }
+
+  &__container {
+    max-width: 1114px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 80px;
+    font-weight: 500;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__accordion {
+    border-bottom: 1px solid var(--neutral-color-30);
+    padding-bottom: 32px;
+    text-align: left;
+
+    @include mobile {
+      padding-bottom: 12px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 56px;
+
+      @include mobile {
+        margin-bottom: 36px;
+      }
+    }
+
+    &-control {
+      @include flex-all-between;
+      gap: 15px;
+      list-style: none;
+      cursor: pointer;
+
+      &::-webkit-detalis-marker {
+        display: none;
+      }
+    }
+
+    &-title {
+      font-weight: 600;
+      line-height: 150%;
+      color: var(--neutral-color-100);
+    }
+
+    &-icon {
+      position: relative;
+      width: 24px;
+      height: 24px;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        border-radius: 6px;
+        width: 18px;
+        height: 3px;
+        background-color: var(--neutral-color-100);
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: inline-block;
+        border-radius: 6px;
+        width: 18px;
+        height: 3px;
+        background-color: var(--neutral-color-100);
+      }
+    }
+
+    &[open] &-icon::after {
+      display: none;
+    }
+
+    &-text {
+      margin-top: 16px;
+      font-weight: 500;
+      line-height: 178%;
+      color: var(--neutral-color-150);
+
+      @include mobile {
+        margin-top: 10px;
+      }
+    }
+  }
+}

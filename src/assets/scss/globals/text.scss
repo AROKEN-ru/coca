@@ -115,6 +115,10 @@
 
     &-large {
       font-size: 24px;
+
+      @include mobile {
+        font-size: 18px;
+      }
     }
 
     &-medium {

@@ -49,6 +49,10 @@
 
   &-h4 {
     font-size: 36px;
+
+    @include mobile {
+      font-size: 24px;
+    }
   }
 
   &-h5 {

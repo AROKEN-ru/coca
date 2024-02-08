@@ -1,0 +1,141 @@
+.get-started {
+  padding: 76px 0 160px;
+
+  @include mobile {
+    padding: 26px 0 80px;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0;
+    max-width: 1440px;
+
+    @include mini-desktop {
+      max-width: calc(var(--container-width) - (var(--container-padding) * 2));
+    }
+
+    @include tablet {
+      padding-right: var(--container-padding);
+    }
+
+    @include small-tablet {
+      justify-content: center;
+    }
+  }
+
+  &__form {
+    @include mobile {
+      @include flex-column-all-center;
+    }
+
+    &-wrapper {
+      position: absolute;
+      left: 8%;
+      border: 1px solid var(--neutral-color-40);
+      padding: 56px 48px;
+      min-width: 608px;
+      background-color: #fff;
+
+      @include tablet {
+        left: var(--container-padding);
+      }
+
+      @include small-tablet {
+        position: inherit;
+        padding: 36px 28px;
+        min-width: 300px;
+      }
+
+      @include mobile {
+        border: none;
+        padding: 0 30px 0 0;
+        width: 100%;
+        min-width: 100%;
+      }
+    }
+
+    &-title {
+      margin-bottom: 20px;
+      font-weight: 600;
+      line-height: 122%;
+      letter-spacing: -0.02em;
+      color: var(--neutral-color-100);
+    }
+
+    &-text {
+      margin-bottom: 48px;
+      font-weight: 400;
+      line-height: 167%;
+      color: var(--neutral-color-150);
+    }
+
+    &-link {
+      color: var(--primary-color-30);
+    }
+
+    &-top {
+      @include flex-all-between;
+      gap: 12px;
+
+      @include mobile {
+        gap: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      }
+    }
+
+    &-label {
+      @include flex-column;
+      margin-bottom: 24px;
+      width: 100%;
+
+      &-text {
+        display: inline-block;
+        margin-bottom: 6px;
+        font-weight: 500;
+        line-height: 143%;
+        color: #1d1e25;
+      }
+    }
+
+    &-input {
+      border: 1px solid var(--neutral-color-30);
+      border-radius: 8px;
+      padding: 10px 14px;
+      width: 100%;
+      height: 44px;
+      font-weight: 400;
+      line-height: 171%;
+      color: #1d1e25;
+
+      &--small {
+        width: 240px;
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+
+      &--textarea {
+        outline: none;
+        height: 134px;
+        resize: none;
+      }
+    }
+
+    &-btn {
+      padding: 16px 32px;
+      color: #fff;
+      background-color: #1d1e25;
+    }
+  }
+
+  &__img {
+    @include small-tablet {
+      display: none;
+    }
+  }
+}

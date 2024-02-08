@@ -49,8 +49,8 @@
       }
 
       @include mobile {
+        margin-right: 30px;
         border: none;
-        padding: 0 30px 0 0;
         width: 100%;
         min-width: 100%;
       }
@@ -61,7 +61,7 @@
       font-weight: 600;
       line-height: 122%;
       letter-spacing: -0.02em;
-      color: var(--neutral-color-100);
+      color: #1d1e25;
     }
 
     &-text {

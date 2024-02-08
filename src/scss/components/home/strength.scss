@@ -26,6 +26,7 @@
 
     @include mobile {
       gap: 42px;
+      margin-bottom: 50px;
     }
   }
 
@@ -92,12 +93,6 @@
   &__list,
   &__img {
     margin-bottom: 80px;
-  }
-
-  &__list {
-    @include mobile {
-      margin-bottom: 50px;
-    }
   }
 
   &__img {

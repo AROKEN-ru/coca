@@ -10,9 +10,9 @@
     margin-bottom: 48px;
 
     @include tablet {
+      gap: 24px;
       flex-direction: column;
       text-align: center;
-      gap: 24px;
     }
 
     @include mobile {
@@ -61,7 +61,7 @@
       display: inline-block;
       width: 115px;
       height: 77px;
-      background: url('../icons/quotes-icon.svg');
+      background: url('../assets/icons/quotes-icon.svg');
       transform: translateY(15px);
 
       @include mini-desktop {
@@ -113,8 +113,8 @@
 
   &__btns {
     @include flex-align-center;
-    justify-content: flex-end;
     gap: 16px;
+    justify-content: flex-end;
     transform: translateY(-40px);
 
     @include mini-desktop {
@@ -142,8 +142,8 @@
     }
 
     &:hover {
-      background-color: var(--neutral-color-100);
       border-color: var(--neutral-color-100);
+      background-color: var(--neutral-color-100);
 
       & svg path {
         fill: var(--neutral-color-10);
